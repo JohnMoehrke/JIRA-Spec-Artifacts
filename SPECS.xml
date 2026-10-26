@@ -3348,6 +3348,41 @@
       <page key="CDA-cda-sd-terminology" name="Terminology" spec="cda-sd"/>
    </specification>
    <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  key="CDA-xsl"
+                  deprecated="false"
+                  name="CDA R2 Stylesheet (XSL) (CDA)"
+                  defaultVersion="4.1.0-beta.2"
+                  defaultWorkgroup="sd"
+                  url="https://github.com/HL7/CDA-core-xsl"
+                  ciUrl="https://hl7.github.io/CDA-core-xsl">
+      <version code="current"
+               deprecated="false"
+               url="https://hl7.github.io/CDA-core-xsl"/>
+      <version code="4.1.0-beta.2"
+               deprecated="true"
+               url="https://github.com/HL7/CDA-core-xsl/releases/tag/v4.1.0-beta.2"/>
+      <version code="4.0.2-beta11"
+               deprecated="true"
+               url="https://github.com/HL7/CDA-core-xsl/releases/tag/4.0.2-beta11"/>
+      <version code="4.0.1"
+               deprecated="true"
+               url="https://github.com/HL7/CDA-core-xsl/releases/tag/v4.0.1"/>
+      <version code="4.0.0"
+               deprecated="true"
+               url="https://github.com/HL7/CDA-core-xsl/releases/tag/v4.0.0"/>
+      <version code="3.0.0"
+               deprecated="true"
+               url="https://github.com/HL7/CDA-core-xsl/releases/tag/v3.0.0"/>
+      <page key="CDA-xsl-NA" name="(NA)" spec="xsl"/>
+      <page key="CDA-xsl-cda-xsl" name="CDA.xsl" spec="xsl"/>
+      <page key="CDA-xsl-cda-l10n-xml"
+            name="cda_l10n.xml (Localization)"
+            spec="xsl"/>
+      <page key="CDA-xsl-examples" name="Examples" spec="xsl"/>
+      <page key="CDA-xsl-documentation" name="Documentation" spec="xsl"/>
+      <page key="CDA-xsl-viewer" name="CDA Viewer" spec="xsl"/>
+   </specification>
+   <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   key="CDA-cotps"
                   deprecated="false"
                   name="Clinical Oncology Treatment Plan and Summary (CDA)"
@@ -6799,13 +6834,16 @@ defaultWorkgroup="ph">-->
                   name="CDS Hooks (FHIR)"
                   ballotUrl="http://cds-hooks.hl7.org/2026Jan"
                   ciUrl="http://build.fhir.org/ig/HL7/cds-hooks"
-                  defaultVersion="2.0.1"
+                  defaultVersion="3.0.0"
                   defaultWorkgroup="cds"
                   gitUrl="https://github.com/HL7/cds-hooks-hl7-site"
                   url="http://cds-hooks.hl7.org">
       <version code="current" url="http://build.fhir.org/ig/HL7/cds-hooks"/>
-      <version code="3.0.0-ballot" url="http://cds-hooks.hl7.org/2026Jan"/>
-      <version code="2.0.1" url="http://cds-hooks.hl7.org/STU2"/>
+      <version code="3.0.0" url="http://cds-hooks.hl7.org/3.0.0"/>
+      <version code="3.0.0-ballot"
+               deprecated="true"
+               url="http://cds-hooks.hl7.org/2026Jan"/>
+      <version code="2.0.1" deprecated="true" url="http://cds-hooks.hl7.org/STU2"/>
       <version code="2.0" deprecated="true" url="http://cds-hooks.hl7.org/2.0"/>
       <version code="1.1"
                deprecated="true"
@@ -6819,6 +6857,58 @@ defaultWorkgroup="ph">-->
       <artifactPageExtension value="-definitions"/>
       <artifactPageExtension value="-examples"/>
       <artifactPageExtension value="-mappings"/>
+      <artifact id="StructureDefinition/CDSHookContext"
+                key="FHIR-cds-hooks-StructureDefinition-CDSHookContext"
+                name="CDS Hook Specific Context (Logical Definition)"
+                spec="cds-hooks"/>
+      <artifact id="CodeSystem/CDSActionType"
+                key="FHIR-cds-hooks-CodeSystem-CDSActionType"
+                name="CDSActionType Codes"
+                spec="cds-hooks"/>
+      <artifact id="ValueSet/CDSActionType"
+                key="FHIR-cds-hooks-ValueSet-CDSActionType"
+                name="CDSActionType Codes ValueSet"
+                spec="cds-hooks"/>
+      <artifact id="StructureDefinition/CDSHooksServices"
+                key="FHIR-cds-hooks-StructureDefinition-CDSHooksServices"
+                name="CDSHooks Discovery Response (Logical Definition)"
+                spec="cds-hooks"/>
+      <artifact id="StructureDefinition/CDSHooksFeedback"
+                key="FHIR-cds-hooks-StructureDefinition-CDSHooksFeedback"
+                name="CDSHooks Feedback (Logical Definition)"
+                spec="cds-hooks"/>
+      <artifact id="StructureDefinition/CDSHooksRequest"
+                key="FHIR-cds-hooks-StructureDefinition-CDSHooksRequest"
+                name="CDSHooks Request (Logical Definition)"
+                spec="cds-hooks"/>
+      <artifact id="StructureDefinition/CDSHooksResponse"
+                key="FHIR-cds-hooks-StructureDefinition-CDSHooksResponse"
+                name="CDSHooks Response (Logical Definition)"
+                spec="cds-hooks"/>
+      <artifact id="StructureDefinition/CDSHooksElement"
+                key="FHIR-cds-hooks-StructureDefinition-CDSHooksElement"
+                name="CDSHooks Services Base Extensible Element"
+                spec="cds-hooks"/>
+      <artifact id="StructureDefinition/CDSHooksExtensions"
+                key="FHIR-cds-hooks-StructureDefinition-CDSHooksExtensions"
+                name="CDSHooks Services Extensions"
+                spec="cds-hooks"/>
+      <artifact id="ValueSet/CDSIndicator"
+                key="FHIR-cds-hooks-ValueSet-CDSIndicator"
+                name="CDSIndicator Codes ValueSet"
+                spec="cds-hooks"/>
+      <artifact id="CodeSystem/CDSLinkType"
+                key="FHIR-cds-hooks-CodeSystem-CDSLinkType"
+                name="CDSLinkType Codes"
+                spec="cds-hooks"/>
+      <artifact id="ValueSet/CDSLinkType"
+                key="FHIR-cds-hooks-ValueSet-CDSLinkType"
+                name="CDSLinkType Codes ValueSet"
+                spec="cds-hooks"/>
+      <artifact id="ValueSet/CDSSelectionBehavior"
+                key="FHIR-cds-hooks-ValueSet-CDSSelectionBehavior"
+                name="CDSSelectionBehavior Codes ValueSet"
+                spec="cds-hooks"/>
       <artifact deprecated="true"
                 key="FHIR-cds-hooks-Conformance"
                 name="Conformance [deprecated]"
@@ -27376,19 +27466,22 @@ defaultWorkgroup="ph">-->
                   name="Personal Healthcare Devices (FHIR)"
                   ballotUrl="http://hl7.org/fhir/uv/phd/2025Sep"
                   ciUrl="https://build.fhir.org/ig/HL7/phd"
-                  defaultVersion="2.0.0"
+                  defaultVersion="2.0.1"
                   defaultWorkgroup="dev"
                   gitUrl="https://github.com/HL7/PHD"
                   url="http://hl7.org/fhir/uv/phd">
       <version code="current" url="https://build.fhir.org/ig/HL7/phd"/>
-      <version code="2.0.0" url="http://hl7.org/fhir/uv/phd/STU2"/>
+      <version code="2.0.1" url="http://hl7.org/fhir/uv/phd/2.0.1"/>
+      <version code="2.0.0"
+               deprecated="true"
+               url="http://hl7.org/fhir/uv/phd/STU2"/>
       <version code="2.0.0-ballot2"
                deprecated="true"
                url="http://hl7.org/fhir/uv/phd/2025Sep"/>
-      <version code="1.1.0" url="http://hl7.org/fhir/uv/phd/STU1.1"/>
       <version code="2.0.0-ballot"
                deprecated="true"
                url="http://hl7.org/fhir/uv/phd/2024Sep"/>
+      <version code="1.1.0" url="http://hl7.org/fhir/uv/phd/STU1.1"/>
       <version code="1.0.0"
                deprecated="true"
                url="http://hl7.org/fhir/uv/phd/STU1"/>
@@ -27949,7 +28042,6 @@ defaultWorkgroup="ph">-->
             key="FHIR-phd-Organization"
             name="Organization [deprecated]"
             spec="phd"/>
-      <page key="FHIR-phd-Organizations" name="Organizations" spec="phd"/>
       <page deprecated="true"
             key="FHIR-phd-overview"
             name="Overview [deprecated]"
@@ -28016,6 +28108,9 @@ defaultWorkgroup="ph">-->
       <page deprecated="true"
             key="FHIR-phd-Rtsa"
             name="Real Time Sample Array; Pleth wave [deprecated]"
+            spec="phd"/>
+      <page key="FHIR-phd-Organizations"
+            name="Referenced Organizations"
             spec="phd"/>
       <page key="FHIR-phd-RemotePatientMonitoringConsiderations"
             name="Remote Patient Monitoring Considerations"
@@ -117109,8 +117204,8 @@ defaultWorkgroup="ph">-->
                   defaultWorkgroup="au-fhir"
                   gitUrl="https://github.com/hl7au/au-fhir-pd"
                   url="http://hl7.org.au/fhir/pd">
-	     <version code="current" url="https://build.fhir.org/ig/hl7au/au-fhir-pd"/>
-	     <version code="2.0.1" url="http://hl7.org.au/fhir/pd/2.0.1"/>
+	     <version code="current" url="https://build.fhir.org/ig/hl7au/au-fhir-pd"/>  
+      <version code="2.0.1" url="http://hl7.org.au/fhir/pd/2.0.1"/>	
 	     <artifactPageExtension value="-definitions"/>
 	     <artifactPageExtension value="-examples"/>
 	     <artifactPageExtension value="-mapping"/>
@@ -117435,6 +117530,58 @@ defaultWorkgroup="ph">-->
             name="Emergency Hospital Attendance [deprecated]"
             deprecated="true"
             spec="au-ps"/>
+   </specification>
+   <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  key="FHIR-au-terminology"
+                  name="AU Terminology (FHIR)"
+                  ciUrl="https://build.fhir.org/ig/hl7au/au-terminology"
+                  defaultVersion="current"
+                  defaultWorkgroup="au-terminology"
+                  gitUrl="https://github.com/hl7au/au-terminology"
+                  url="http://terminology.hl7.org.au">
+	     <version code="current" url="https://build.fhir.org/ig/hl7au/au-terminology"/>	
+	     <artifactPageExtension value="-definitions"/>
+	     <artifactPageExtension value="-examples"/>
+	     <artifactPageExtension value="-mapping"/>
+	     <page key="FHIR-au-terminology-NA" name="(NA)" spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-many" name="(many)" spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-toc"
+            name="Table of Contents"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-index" name="Home" spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-guidance"
+            name="Guidance"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-general-governance"
+            name="Terminology Governance Guidance"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-hl7au-governance"
+            name="HL7 Australia Governance and Processes"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-fhirartefacts"
+            name="FHIR Artefacts"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-profiles"
+            name="Profiles"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-codesystems"
+            name="Code Systems"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-valuesets"
+            name="Value Sets"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-support"
+            name="Support"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-downloads"
+            name="Downloads"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-license"
+            name="License and Legal"
+            spec="au-terminology"/>
+	     <page key="FHIR-au-terminology-changes"
+            name="Change Log"
+            spec="au-terminology"/>
    </specification>
    <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   key="FHIR-us-medication-rems"
@@ -123604,12 +123751,13 @@ defaultWorkgroup="ph">-->
                   name="SMART Scheduling Links (FHIR)"
                   ballotUrl="http://hl7.org/fhir/uv/smart-scheduling-links/2026May"
                   ciUrl="https://build.fhir.org/ig/HL7/smart-scheduling-links"
-                  defaultVersion="1.0.0-ballot"
+                  defaultVersion="1.0.0"
                   defaultWorkgroup="pa"
                   gitUrl="https://github.com/HL7/smart-scheduling-links"
                   url="http://hl7.org/fhir/uv/smart-scheduling-links">
       <version code="current"
                url="https://build.fhir.org/ig/HL7/smart-scheduling-links"/>
+      <version code="1.0.0" url="http://hl7.org/fhir/uv/smart-scheduling-links/1.0.0"/>
       <version code="1.0.0-ballot"
                url="http://hl7.org/fhir/uv/smart-scheduling-links/2026May"/>
       <artifactPageExtension value="-definitions"/>
@@ -123668,9 +123816,10 @@ defaultWorkgroup="ph">-->
                 key="FHIR-smart-scheduling-links-StructureDefinition-smart-scheduling-location"
                 name="Location"
                 spec="smart-scheduling-links"/>
-      <artifact id="CodeSystem/location-physical-type-cs"
+      <artifact deprecated="true"
+                id="CodeSystem/location-physical-type-cs"
                 key="FHIR-smart-scheduling-links-CodeSystem-location-physical-type-cs"
-                name="Location Physical Type CodeSystem"
+                name="Location Physical Type CodeSystem [deprecated]"
                 spec="smart-scheduling-links"/>
       <artifact id="ValueSet/location-physical-type-vs"
                 key="FHIR-smart-scheduling-links-ValueSet-location-physical-type-vs"
@@ -123716,6 +123865,10 @@ defaultWorkgroup="ph">-->
                 key="FHIR-smart-scheduling-links-Slot-AcceptOnlyExistingPatients"
                 name="Slot Accepting Only Existing Patients"
                 spec="smart-scheduling-links"/>
+      <artifact id="CodeSystem/temporary"
+                key="FHIR-smart-scheduling-links-CodeSystem-temporary"
+                name="Temporary CodeSystem"
+                spec="smart-scheduling-links"/>
       <page key="FHIR-smart-scheduling-links-NA"
             name="(NA)"
             spec="smart-scheduling-links"/>
@@ -123727,6 +123880,9 @@ defaultWorkgroup="ph">-->
             spec="smart-scheduling-links"/>
       <page key="FHIR-smart-scheduling-links-change-log"
             name="Change Log"
+            spec="smart-scheduling-links"/>
+      <page key="FHIR-smart-scheduling-links-conformance"
+            name="Conformance"
             spec="smart-scheduling-links"/>
       <page key="FHIR-smart-scheduling-links-downloads"
             name="Downloads"
